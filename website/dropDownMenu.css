@@ -1,0 +1,16 @@
+body{
+    min-height:100vh;
+    justify-content:center;
+    align-items:center;
+    color:rgb(0, 0, 0);
+}
+
+select{
+    border:none;
+    padding: 10px 20px;
+    border-radius:5px;
+}
+
+select:focus{
+    outline:black;
+}
