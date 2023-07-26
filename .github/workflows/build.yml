@@ -5,7 +5,7 @@ on:
     branches:
       - main
   workflow_dispatch:
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,9 +21,6 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-
-      - name: Build Website
-        run: npm run build
 
       # Here you can use the MAPBOX_TOKEN secret in your JavaScript build script
       - name: Run Build Script
