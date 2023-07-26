@@ -45,8 +45,17 @@ var poiPos;
                                     '#09ed09';
             }
 
+            try {
+                // Read the secret token from the file
+                const token = fs.readFileSync('mapbox_token.txt', 'utf8').trim();
+                //console.log('Mapbox Token:', token);
+              
+              } catch (err) {
+                console.error('Error reading token:', err);
+              }
+
             // Design of map from mapbox
-            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=secrets.MAPBOX_TOKEN', {
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${token}', {
                 //id: 'mapbox/light-v11', //Option 1
                 id: 'mapbox/streets-v12', //Option 2
                 //id: 'mapbox/outdoors-v12',
