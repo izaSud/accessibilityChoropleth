@@ -45,8 +45,10 @@ var poiPos;
                                     '#09ed09';
             }
 
+            const mapboxToken = window.mapboxToken;
+
             // Design of map from mapbox
-            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${secrets.MAPBOX_TOKEN}', {
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=',mapboxToken, {
                 //id: 'mapbox/light-v11', //Option 1
                 id: 'mapbox/streets-v12', //Option 2
                 //id: 'mapbox/outdoors-v12',
